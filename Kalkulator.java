@@ -20,21 +20,39 @@ public class Kalkulator {
         System.out.println("2. Odejmowanie");
         System.out.println("3. Dzielenie");
         System.out.println("4. Mnozenie");
-
-
         System.out.println("Podaj wybor!");
         wybor = scanner.nextInt();
 
         System.out.println("Podaj pierwsza liczbę!: ");
         liczba1 = scanner.nextInt();
 
+        System.out.println("Podaj druga liczbe!: ");
+        liczba2 = scanner.nextInt();
 
-
-
-
-
-
-
-
-}
+        switch (wybor) {
+            case 1:
+                wynik = liczba1 + liczba2;
+                System.out.println("Wynik dodawania: " + wynik);
+                break;
+            case 2:
+                wynik = liczba1 - liczba2;
+                System.out.println("Wynik odejmowania: " + wynik);
+                break;
+            case 3:
+                wynik = liczba1 / liczba2;
+                if (liczba1 == 0 || liczba2 == 0) {
+                    System.out.println("Nie mozna dzielic przez zero!");
+                } else {
+                    System.out.println("Wynik dzielenia: " + wynik);
+                }
+                break;
+            case 4:
+                wynik = liczba1 * liczba2;
+                System.out.println("Wynik mnozenia: " + wynik);
+                break;
+            default:
+                System.out.println("Błędny wybor!");
+                break;
+        }
+    }
 }
